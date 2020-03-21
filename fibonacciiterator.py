@@ -2,20 +2,20 @@ import sys
 
 class fibiterator:
 	def __init__(self, n):
-		self.n = [0,1]
+		self.seq = [0,1]
 		self.max = n
-		self.seq = 0
+		self.pos = 0
 
 	def __iter__(self):
-		self.seq = 0
-		self.n = [0,1]
+		self.pos = 0
+		self.seq = [0,1]
 		return self
 
 	def __next__(self):
-		if self.seq <= self.max:
-			self.seq+=1
-			self.n.append(self.n[-1] + self.n[-2])
-			return self.n[-1]
+		if self.pos <= self.max:
+			self.pos+=1
+			self.seq.append(self.seq[-1] + self.seq[-2])
+			return self.seq[-1]
 		else: raise StopIteration
 
 if __name__ == "__main__":
