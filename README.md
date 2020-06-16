@@ -1,4 +1,4 @@
-# practice
+# cmdline-fib-iterator
 I wanted to practice uploading on github so I made this..
 
 This repository contains only one file that lets users calculate the nth Fibonacci number from the command line.
